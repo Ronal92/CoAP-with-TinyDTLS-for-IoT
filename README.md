@@ -1,10 +1,10 @@
 
 
-#설계주제
+# 설계주제
 
 사물인터넷 표준 프로토콜 CoAP에서의 보안 프로토콜 Tiny-DTLS 적용
 
-#키워드
+# 키워드
 
 사물인터넷,  보안,  무선  센서  네트워크,  CoAP,   DTLS,  TinyDTLS,   OpenMote-
 CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
