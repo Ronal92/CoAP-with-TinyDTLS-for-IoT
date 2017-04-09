@@ -10,21 +10,21 @@
 CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 
 
-#problem statement
+# problem statement
 
 1)   제한된 네트워크에서 사용하는 표준 프로토콜인 CoAP은 보안에   취약하
 다.
 
 2) CoAP은 transport layer에서 UDP를 사용하므로 보안을 위하여 DTLS 프 로토콜을 고려할 수 있으나 IoT 통신의 제한적인 리소스 때문에 실질적 구현이 어렵다.
 
-#설계결과물
+# 설계결과물
 1)   센서로부터 센서 값을 받아 올 수 있는 라즈베리파이   환경
 2) CoAP + tinydtls 통신을 simulation 할 수 있는 서버와 클라이언트 프로 그램
 3)   Client측에서 결과를 확인할 수 있는 JAVA  기반  API
 4)	CoAP + TinyDTLS 코드가 올라간 OpenMote-CC2538
 5)	라즈베리파이에 XBee dongle을 통해 연결한 Slip-radio  OpenMote
 
-#구현에 사용된 개발도구
+# 구현에 사용된 개발도구
 
 ## Hardware
 
@@ -44,7 +44,7 @@ CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 
 8) SmartRF06 Evaluation board: OpenMote의 메모리를 flash할 때 사용한다.
 
-##Software
+## Software
 
 1) cetic/6lbr: 라즈베리파이를 IPv6라우터로 동작 가능하게 해주는 프로그램이다.
 
@@ -64,16 +64,12 @@ CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 
 9) wireshark: 통신 패킷을 캡쳐하는 프로그램이다. 개발한 CoAP + TinyDTLS 코드가 실행될 때 적절한 Handshake이후에 CoAP메시지를 잘 암호화하는지 테스트하기 위하여 wireshark를 사용하였다.
 
-10) eclipse: 자바 GUI 프로그램에 대하여 그 코드에 대한 작업과 결과 테스트를 위하여 자바
- 
+10) eclipse: 자바 GUI 프로그램에 대하여 그 코드에 대한 작업과 결과 테스트를 위하여 자바의 개발 툴인 eclipse를 사용하였다.
 
-
-
-의 개발 툴인 eclipse를 사용하였다.
 11) californium-scandium: californium은 CoAP 프로토콜과 그와 관련된 여러 라이브러리를 java로 구현한 프로젝트이다. californium의 subproject중 하나인 scandium은 DTLS1.2가 구현 되어 CoAP를 암호화 해주는 역할을 한다. 본 프로젝트에서 구현한 CoAP + TinyDTLS 코드가 표준에 맞게 잘 구현 되었는지 판단하기 위하여 일반 상용화된 라이브러리인 californium-scandium의 코드를 이용하여 테스트하였다. 또한, 서버인 OpenMote와 통신하는 client program으로 사용하였다.
 
 
-#팀원으로서의 역할
+# 팀원으로서의 역할
 
 - Centos 설치하여 개발환경 구축 라즈베리파이에 6lbr 환경 설정을 하였다.
 
@@ -84,7 +80,7 @@ CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 - SmartRF06 Evaluation Board를 사용한 Flash programmer 2 사용
 
 
-#구현 환경 그림
+# 구현 환경 그림
 
 ![](http://i.imgur.com/veUxhZi.png)
 
@@ -97,7 +93,7 @@ CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 (4) 통신순서는 먼저, client program에서 server인 OpenMote로 resource를 요청한다. [Figure 4.1]에 나타난 것과 같이 CoAP부터 하위 계층으로 encapsulation을 하여 암호화 된 메시지를 생성한다. 그리고 aaaa:: 네트워크로 패킷을 전송한다. Server는 패킷을 수신 한 후 decapsulation하여 복호화 된 메시지를 읽고, 요구한 resource를 반환한다.
 
 
-#참고논문 
+# 참고논문 
 
 -	RFC 7252 – The Constrained Application Protocol, Z.Shelby, K.Hartke, C.Bormann, IETF, June 2014.
 
@@ -117,7 +113,7 @@ CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 
 -	How to port openwsn - prof. jong won Lee, HGU, December 2015. 
 
-#참고 웹사이트
+# 참고 웹사이트
 
 -	Raspberry Pi OS https://www.raspberrypi.org/downloads/ 
 
@@ -142,7 +138,7 @@ CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 -   CoAP과 TinyDTLS build http://sunmaysky.blogspot.kr/2015/11/how-to-build-dtls-example-for.html
 
 
-#동영상 링크
+# 동영상 링크
 
 [http://developest.tistory.com/4](http://developest.tistory.com/4)
 
