@@ -1,4 +1,5 @@
 
+
 #설계주제
 
 사물인터넷 표준 프로토콜 CoAP에서의 보안 프로토콜 Tiny-DTLS 적용
@@ -139,4 +140,9 @@ CC2538, OpenBattery, OpenBase, Raspberry Pi, Ultrasonic sensor
 -   openmote build and putty configuration http://www.openmote.com/blog/getting-started-with-contiki-and-openmote.html
 
 -   CoAP과 TinyDTLS build http://sunmaysky.blogspot.kr/2015/11/how-to-build-dtls-example-for.html
+
+
+#동영상 링크
+
+[http://developest.tistory.com/4](http://developest.tistory.com/4)
 
